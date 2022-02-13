@@ -1,4 +1,3 @@
 build/*
-!build/toast.css
 
 node_modules/
