@@ -1,0 +1,95 @@
+.lets-toast {
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-item-bg: hsl(0, 0%, 17%);
+  --clr-error: hsl(4, 90%, 58%);
+  --clr-info: hsl(210, 54%, 46%);
+  --clr-success: hsl(149, 39%, 50%);
+  --clr-warning: hsl(41, 57%, 54%);
+  --clr-white: hsl(0, 0%, 100%);
+  --hpos: center;
+  --vpos: flex-start;
+  --item-spacing: 10px;
+  --item-vpadding: 10px;
+  --item-hpadding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: var(--vpos);
+  left: 0;
+  list-style: none;
+  margin-top: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: calc(100% - 20px);
+  z-index: 2001;
+}
+.lets-toast--hpos-left {
+  --hpos: flex-start;
+}
+.lets-toast--hpos-center {
+  --hpos: center;
+}
+.lets-toast--hpos-right {
+  --hpos: flex-end;
+}
+.lets-toast--vpos-top {
+  --vpos: flex-start;
+}
+.lets-toast--vpos-top .lets-toast__item {
+  margin-top: var(--item-spacing);
+}
+.lets-toast--vpos-center {
+  --vpos: center;
+}
+.lets-toast--vpos-center .lets-toast__item {
+  --margin: calc(var(--item-spacing) / 2);
+  margin-bottom: var(--margin);
+  margin-top: var(--margin);
+}
+.lets-toast--vpos-bottom {
+  --vpos: flex-end;
+}
+.lets-toast--vpos-bottom .lets-toast__item {
+  margin-bottom: var(--item-spacing);
+}
+.lets-toast__item {
+  align-self: var(--hpos);
+  background-color: var(--clr-item-bg);
+  border-left: 10px solid var(--severity, --clr-blue);
+  box-shadow: 0 0 5px var(--clr-black);
+  color: var(--clr-white);
+  display: flex;
+  line-height: inherit;
+  padding: var(--item-vpadding) var(--item-hpadding);
+  pointer-events: initial;
+  position: relative;
+}
+.lets-toast__item--error {
+  --severity: var(--clr-error);
+}
+.lets-toast__item--info {
+  --severity: var(--clr-info);
+}
+.lets-toast__item--success {
+  --severity: var(--clr-success);
+}
+.lets-toast__item--warning {
+  --severity: var(--clr-warning);
+}
+.lets-toast__dismiss {
+  background-color: transparent;
+  border: none;
+  color: var(--clr-white);
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  line-height: inherit;
+  margin-left: var(--item-hpadding);
+  padding: 0;
+}
+.lets-toast__dismiss:hover {
+  color: var(--severity);
+}

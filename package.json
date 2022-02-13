@@ -1,0 +1,49 @@
+{
+  "name": "lets-toast",
+  "version": "1.0.0",
+  "description": "Toast notifications",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "npm run clean-build-dir && npm-run-all --print-label --parallel build:*",
+    "build:sass": "sass src/styles.scss build/toast.css --no-source-map",
+    "build:sass-min": "sass src/styles.scss build/toast.min.css --no-source-map --style compressed",
+    "build:babel": "babel ./src --out-dir build --extensions '.ts'",
+    "build:typescript": "tsc",
+    "dev": "npm run clean-build-dir && npm-run-all --print-label --parallel dev:*",
+    "dev:sass": "sass --watch src/styles.scss build/toast.css",
+    "dev:babel": "babel --watch ./src --out-dir build --extensions '.ts'",
+    "dev:typescript": "tsc --watch",
+    "clean-build-dir": "rimraf build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onosendi/lets-toast.git"
+  },
+  "keywords": [
+    "notifications",
+    "snackbar",
+    "toast"
+  ],
+  "author": "Daniel Lindegren",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onosendi/lets-toast/issues"
+  },
+  "homepage": "https://github.com/onosendi/lets-toast#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.2",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-plugin-import": "^2.25.4",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "sass": "^1.49.7",
+    "typescript": "^4.5.5"
+  }
+}
