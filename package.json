@@ -9,7 +9,7 @@
     "build:babel": "babel ./src --out-dir build --extensions '.ts'",
     "build:typescript": "tsc",
     "dev": "npm run clean-build-dir && npm-run-all --print-label --parallel dev:*",
-    "dev:sass": "sass --watch src/styles.scss build/toast.css",
+    "dev:sass": "sass --watch src/styles.scss build/toast.min.css",
     "dev:babel": "babel --watch ./src --out-dir build --extensions '.ts'",
     "dev:typescript": "tsc --watch",
     "clean-build-dir": "rimraf build"

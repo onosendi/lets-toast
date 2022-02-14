@@ -12,15 +12,15 @@
   --item-vpadding: 10px;
   --item-hpadding: 20px;
 
+  bottom: 0;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: var(--vpos);
   left: 0;
   list-style: none;
+  margin-bottom: 0;
   margin-top: 0;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 0;
   pointer-events: none;
   position: fixed;
   top: 0;
@@ -67,6 +67,7 @@
   }
 
   &__item {
+    align-items: center;
     align-self: var(--hpos);
     background-color: var(--clr-item-bg);
     border-left: 10px solid var(--severity, --clr-blue);
@@ -93,6 +94,10 @@
     &--warning {
       --severity: var(--clr-warning);
     }
+  }
+
+  &__text {
+    margin: 0;
   }
 
   &__dismiss {
