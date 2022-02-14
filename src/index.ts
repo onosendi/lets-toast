@@ -14,7 +14,7 @@ export interface ToastOptions {
 
 const defaultOptions: Required<ToastOptions> = {
   delay: 3000,
-  dismiss: 'X',
+  dismiss: '',
   dismissible: true,
   hPos: 'center',
   newestAtTop: true,
