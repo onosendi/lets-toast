@@ -5,7 +5,8 @@
   "main": "build/index.js",
   "scripts": {
     "build": "npm run clean-build-dir && npm-run-all --print-label --parallel build:*",
-    "build:sass": "sass src/styles.scss build/toast.min.css --no-source-map --style compressed",
+    "build:sass": "sass src/styles.scss build/toast.css --no-source-map",
+    "build:sass-min": "sass src/styles.scss build/toast.min.css --no-source-map --style compressed",
     "build:babel": "babel ./src --out-dir build --extensions '.ts'",
     "build:typescript": "tsc",
     "dev": "npm run clean-build-dir && npm-run-all --print-label --parallel dev:*",
