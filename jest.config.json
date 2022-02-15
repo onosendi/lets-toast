@@ -1,0 +1,8 @@
+{
+  "coverageReporters": [
+    "html"
+  ],
+  "transform": {
+    "\\.ts$": "babel-jest"
+  }
+}

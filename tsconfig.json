@@ -5,7 +5,7 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "outDir": "./build",
-    "isolatedModules": true,
+    "isolatedModules": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -16,6 +16,7 @@
     "node_modules"
   ],
   "include": [
-    "src"
+    "src",
+    "tests"
   ]
 }
