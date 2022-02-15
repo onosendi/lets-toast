@@ -1,7 +1,7 @@
 {
   "name": "lets-toast",
   "version": "1.0.0",
-  "description": "Toast notifications",
+  "description": "Simple, customizable toast notifications",
   "main": "build/index.js",
   "scripts": {
     "build": "npm run clean-build-dir && npm-run-all --print-label --parallel build:*",
