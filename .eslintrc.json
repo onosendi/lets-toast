@@ -14,7 +14,9 @@
     "sourceType": "module"
   },
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "testing-library",
+    "jest-dom"
   ],
   "rules": {
     "@typescript-eslint/consistent-type-imports": [

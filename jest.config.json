@@ -2,6 +2,21 @@
   "coverageReporters": [
     "html"
   ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 100,
+      "functions": 100,
+      "lines": 100,
+      "statements": 100
+    }
+  },
+  "setupFilesAfterEnv": [
+    "<rootDir>/tests/setup.ts"
+  ],
+  "testEnvironment": "jsdom",
+  "testMatch": [
+    "<rootDir>/tests/*.test.ts"
+  ],
   "transform": {
     "\\.ts$": "babel-jest"
   }

@@ -12,6 +12,8 @@ export interface ToastOptions {
   vPos?: ToastVerticalPositions;
 }
 
+const className = 'lets-toast';
+
 const defaultOptions: Required<ToastOptions> = {
   delay: 3000,
   dismiss: '',
@@ -33,7 +35,7 @@ function removeListItem(
   }
 }
 
-type ToastReturn = (
+export type ToastReturn = (
   message: string,
   options?: ToastOptions,
 ) => void;
@@ -41,11 +43,11 @@ type ToastReturn = (
 function Toast(initOptions: ToastOptions = {}): ToastReturn {
   return (message, options) => {
     const opts = { ...defaultOptions, ...initOptions, ...options };
-    const className = 'lets-toast';
 
-    let ul = document.querySelector(`.${className}`) as HTMLUListElement;
+    let ul = document.querySelector('[data-toast]') as HTMLUListElement;
     if (!ul) {
       ul = document.createElement('ul');
+      ul.dataset.toast = '';
       ul.classList.add(className);
       ul.classList.add(`${className}--vpos-${opts.vPos}`);
       ul.classList.add(`${className}--hpos-${opts.hPos}`);
@@ -95,5 +97,5 @@ function Toast(initOptions: ToastOptions = {}): ToastReturn {
 
 const toast = Toast();
 
-export { toast };
+export { className, toast };
 export default Toast;
