@@ -97,5 +97,5 @@ function Toast(initOptions: ToastOptions = {}): ToastReturn {
 
 const toast = Toast();
 
-export { className, toast };
+export { toast };
 export default Toast;

@@ -2,9 +2,11 @@ import { getByRole, queryByRole, screen } from '@testing-library/dom';
 import userEvent from '@testing-library/user-event';
 import { nanoid } from 'nanoid';
 import type { ToastOptions, ToastReturn } from '../src/index';
-import Toast, { className, toast } from '../src/index';
+import Toast, { toast } from '../src/index';
 
 jest.useFakeTimers();
+
+const className = 'lets-toast';
 
 beforeEach(() => {
   document.body.innerHTML = `
