@@ -1,6 +1,4 @@
-# Testing
 coverage/
 
-# Node
 build/
 node_modules/
