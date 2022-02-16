@@ -123,11 +123,13 @@ test('Dismiss button dismisses notification and list remains', () => {
 test('Dismissed after delay', () => {
   init(toast, { delay: 4000 });
   jest.runAllTimers();
-  expect(screen.queryByRole('listitem')).toBe(null);
+  const li = screen.queryByRole('listitem');
+  expect(li).toBe(null);
 });
 
 test('Not dismissed if delay is 0', () => {
   init(toast, { delay: 0 });
   jest.runAllTimers();
-  expect(screen.queryByRole('listitem')).toBeTruthy();
+  const li = screen.queryByRole('listitem');
+  expect(li).toBeTruthy();
 });
