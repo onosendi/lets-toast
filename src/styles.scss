@@ -69,7 +69,8 @@
     align-self: var(--hpos);
     background-color: var(--clr-item-bg);
     border-left: 10px solid var(--severity, --clr-blue);
-    box-shadow: 0 0 5px var(--clr-black);
+    border-radius: 4px;
+    box-shadow: hsla(210, 8%, 62%, 0.2) 0px 8px 24px;
     color: var(--clr-white);
     display: flex;
     line-height: inherit;
