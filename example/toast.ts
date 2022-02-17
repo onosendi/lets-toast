@@ -1,8 +1,8 @@
 import Toast from 'lets-toast';
 
 const toast = Toast({
-  dismiss: '',
-  dismissible: false,
+  hPos: 'right',
+  vPos: 'bottom',
 });
 
 export default toast;
