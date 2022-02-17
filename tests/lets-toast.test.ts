@@ -38,7 +38,7 @@ function init(func: ToastReturn, options: ToastOptions = {}) {
 }
 
 test('Dismiss text', () => {
-  const { li } = init(toast, { dismiss: 'dismiss' });
+  const { li } = init(toast, { dismiss: 'dismiss', dismissible: true });
   const buttonText = getByRole(li, 'button').textContent;
   expect(buttonText).toBe('dismiss');
 });

@@ -16,8 +16,8 @@ const className = 'lets-toast';
 
 const defaultOptions: Required<ToastOptions> = {
   delay: 3000,
-  dismiss: '',
-  dismissible: true,
+  dismiss: 'dismiss',
+  dismissible: false,
   hPos: 'center',
   newestAtTop: true,
   severity: 'info',
