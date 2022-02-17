@@ -22,7 +22,7 @@
     "version": "auto-changelog && git add CHANGELOG.md",
     "postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
     "prepublish": "not-in-publish || npm run prepublish-only",
-    "prepublish-only": "safe-publish-latest && npm run build"
+    "prepublishOnly": "safe-publish-latest && npm run build"
   },
   "repository": {
     "type": "git",
