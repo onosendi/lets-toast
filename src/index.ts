@@ -25,13 +25,15 @@ const defaultOptions: Required<ToastOptions> = {
 };
 
 function removeListItem(
-  ul: HTMLUListElement,
+  ul: HTMLUListElement | null,
   li: HTMLLIElement,
 ) {
   li.remove();
-  const listItems = ul.querySelector('li');
-  if (!listItems) {
-    ul.remove();
+  if (ul) {
+    const listItems = ul.querySelector('li');
+    if (!listItems) {
+      ul.remove();
+    }
   }
 }
 
@@ -44,7 +46,7 @@ function Toast(initOptions: ToastOptions = {}): ToastReturn {
   return (message, options) => {
     const opts = { ...defaultOptions, ...initOptions, ...options };
 
-    let ul = document.querySelector('[data-toast]') as HTMLUListElement;
+    let ul = document.querySelector<HTMLUListElement>('[data-toast]');
     if (!ul) {
       ul = document.createElement('ul');
       ul.dataset.toast = '';
